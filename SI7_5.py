@@ -6,20 +6,16 @@ pygame.mixer.init()
 clock=pygame.time.Clock()
 screen = pygame.display.set_mode((400,600))
 
-#Loading images
+
 background_image = pygame.image.load("bg.jpg").convert_alpha()
 enemy_image = pygame.image.load("enemy.png").convert_alpha()
 player_image = pygame.image.load("player.png").convert_alpha()
 
-#Creating sound
+
 fire_sound=pygame.mixer.Sound("laser5.wav")
+#Add code to load the sound named "hit01.wav"
 
 
-pygame.mixer.music.load("bgmusic.wav")
-pygame.mixer.music.set_volume(0.2)
-pygame.mixer.music.play()
-
-#creating objects of game
 player=pygame.Rect(200,500,30,30)
 playerSpeed=20
 enemy=pygame.Rect(70,50,40,40)
@@ -83,6 +79,7 @@ while True:
             enemy.y=-1000
             enemyspeed=0
             screen.blit(over_text,[130,250])        
+            #add code to play the blast sound.
         
         #pygame.draw.rect(screen,(123,200,100),enemy)
         screen.blit(enemy_image,enemy)
