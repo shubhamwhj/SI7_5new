@@ -13,7 +13,7 @@ player_image = pygame.image.load("player.png").convert_alpha()
 
 
 fire_sound=pygame.mixer.Sound("laser5.wav")
-#Add code to load the sound named "hit01.wav"
+
 
 
 player=pygame.Rect(200,500,30,30)
@@ -73,7 +73,7 @@ while True:
             enemy.x=-10000
             bullet.y=-10000
             score=score+1
-            #add code to play the blast sound.
+            
                     
         if player.colliderect(enemy):
             player.y=-1000
