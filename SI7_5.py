@@ -73,6 +73,7 @@ while True:
             enemy.x=-10000
             bullet.y=-10000
             score=score+1
+            #pygame.draw.rect(screen,(123,200,100),enemy)
                     
         if player.colliderect(enemy):
             player.y=-1000
@@ -81,7 +82,7 @@ while True:
             screen.blit(over_text,[130,250])        
             #add code to play the blast sound.
         
-        #pygame.draw.rect(screen,(123,200,100),enemy)
+        
         screen.blit(enemy_image,enemy)
         
     pygame.draw.rect(screen,(225,225,15),bullet)         
